@@ -1,0 +1,32 @@
+{
+  "name": "mintrix-sales-os",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "build:netlify": "next build --webpack",
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:engine && npm run test:acceptance && npm run test:security",
+    "test:engine": "tsx src/server/engine-test.mts",
+    "test:acceptance": "tsx tests/acceptance.mts",
+    "test:security": "tsx tests/security.mts",
+    "demo:show": "tsx scripts/demo-show.mts",
+    "demo:clear": "tsx scripts/demo-show.mts clear"
+  },
+  "dependencies": {
+    "@types/pg": "^8.23.1",
+    "next": "16.3.6",
+    "pg": "^8.23.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

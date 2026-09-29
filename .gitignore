@@ -1,0 +1,30 @@
+# Secrets. Real values live in .env.local (read by Next.js and by the test and
+# demo scripts). Only .env.example, which holds placeholders, is committed.
+.env.local
+.env
+.env*
+!.env.example
+SUPABASE_CREDENTIALS.local.txt
+*.local.txt
+*.pem
+*.crt
+*.key
+
+# Local data: the V0.1 SQLite database holds real school contacts.
+data/
+*.db
+
+node_modules/
+.next/
+out/
+.vercel/
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Python reference implementation
+__pycache__/
+*.pyc
+
+# macOS zip debris
+.DS_Store
+__MACOSX/
